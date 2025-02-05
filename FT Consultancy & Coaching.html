@@ -64,7 +64,7 @@
                 answerSummary += (index + 1) + el.nextSibling.textContent.trim()[0].toLowerCase();
             });
             
-            let resultMessage = "恭喜你完成测评！\n\n请点击 WhatsApp，Kelly 会根据你的结果来给你分析。";
+            let resultMessage = `恭喜你完成测评！<br><br>您的总分是 <strong>${score} 分</strong>。<br><br>请点击 WhatsApp，Kelly 会根据你的结果来给你分析。`;
             
             let whatsappMessage = `我的测评总分是 ${score} 分，(${answerSummary})\n请帮我分析我的测评结果。\n\n⚠️ 此信息为系统根据你的结果自动生成，无需更改，直接发送给 Kelly。⚠️`;
             let whatsappLink = `https://wa.me/601110808939?text=${encodeURIComponent(whatsappMessage)}`;
